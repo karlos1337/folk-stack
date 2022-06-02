@@ -1,0 +1,47 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true
+  },
+  "settings": {
+    "jest": {
+      "version": 27
+    }
+  },
+  "plugins": ["@typescript-eslint", "import", "jest"],
+  "extends": [
+    "eslint:recommended",
+    "@remix-run/eslint-config",
+    "@remix-run/eslint-config/node",
+    "@remix-run/eslint-config/jest-testing-library",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "ignorePatterns": ["jest.config.js"],
+  "rules": {
+		"react/display-name": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-unused-vars":"off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "^_",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "import/no-unresolved": "off",
+    "import/order": [
+      "error",
+      {
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "groups": ["external", "internal"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": false
+        }
+      }
+    ]
+  }
+}

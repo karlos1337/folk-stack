@@ -1,0 +1,33 @@
+%reset-common {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  border: 0;
+}
+
+%reset {
+  @extend %reset-common;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  vertical-align: baseline;
+  list-style: none;
+}
+
+%container {
+  @include make-container();
+}
+
+%icon {
+  display: inline;
+  background-color: currentcolor;
+  mask: var(--icon) center/contain no-repeat;
+
+  &::before {
+    color: transparent;
+    content: "M";
+  }
+}

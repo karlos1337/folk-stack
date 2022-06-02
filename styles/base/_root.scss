@@ -1,0 +1,17 @@
+:root {
+  -app-height: 100vh;
+  -bs-h1-font-size: 2rem;
+  @include media-breakpoint-up("lg") {
+    --bs-h1-font-size: 2.625rem;
+    --bs-modal-inner-padding: 34px;
+    --gutter-section: #{s(5)};
+  }
+
+  @include media-breakpoint-up("xxl") {
+    --gutter-section: #{s(6)};
+  }
+
+  @each $name, $icon in $icons {
+    --icon-#{$name}: #{$icon};
+  }
+}

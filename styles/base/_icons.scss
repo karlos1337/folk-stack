@@ -1,0 +1,6 @@
+@each $name, $icon in $icons {
+  .icon-#{$name} {
+    --icon: var(--icon-#{$name});
+    @extend %icon;
+  }
+}
